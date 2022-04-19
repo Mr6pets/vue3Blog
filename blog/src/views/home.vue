@@ -1,6 +1,24 @@
 <script setup>
   import {ref,reactive,computed,watch,watchEffect} from 'vue';
+/**-------------------------------关于ref 和 reactive的区别------------------------------------*/
 
+//定义变量未对象或者为数组
+const refData=ref({name:'liu',age:18});
+const reactiveData=ref({name:'刘',age:16});
+const updateRefData=()=>{
+  refData.value.name="liu改刘";
+}
+const updateReactiveData=()=>{
+  reactiveData.name="刘改liu";
+}
+
+//定义变量为基本类型
+const refDataBase=ref('liu');
+const reactiveDataBase=reactive('刘');
+
+// ref 和reactive的区别： 对于对象的调用 reactive不用.value； ref 可以对基本类型和对象和数组进行设置，reactive不能对基本类型改动
+
+/**-----------------------------------------------我是分割线-------------------------------*/
   const names=ref([
     {name:"11"},
     {name:"22"},
