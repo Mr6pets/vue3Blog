@@ -6,7 +6,7 @@ import TagCloud from "../components/Tagcloud.vue"
 
 const {posts,load}= EXP_getData();
 load();
-  console.log(posts,"000")
+console.log(posts,"000")
 </script>
 
 <template>

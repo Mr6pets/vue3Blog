@@ -2,7 +2,7 @@
   import {ref,reactive,computed,watch,watchEffect} from 'vue';
 /**-------------------------------关于ref 和 reactive的区别------------------------------------*/
 
-//定义变量未对象或者为数组
+//定义变量为对象或者为数组
 const refData=ref({name:'liu',age:18});
 const reactiveData=ref({name:'刘',age:16});
 const updateRefData=()=>{
